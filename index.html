@@ -93,6 +93,7 @@
 <div class="hidden md:flex gap-8 items-center">
 <a class="text-black font-semibold border-b border-slate-900 tracking-tight hover:text-black transition-colors duration-300" href="#home">Home</a>
 <a class="text-black font-medium tracking-tight hover:text-black transition-colors duration-300" href="#projects">Projects</a>
+<a class="text-black font-medium tracking-tight hover:text-black transition-colors duration-300" href="#awards">Awards</a>
 </div>
 <div class="flex gap-4">
 <a href="mailto:eagustyack+work@gmail.com" class="text-black hover:text-black transition-colors"><span class="material-symbols-outlined">mail</span></a>
@@ -202,6 +203,43 @@
     </div>
 </section>
 
+<!-- Publications, Certifications & Awards Section -->
+<section id="awards" class="relative z-10 w-full max-w-7xl mx-auto px-8 md:px-16 py-24 opacity-0">
+    <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+        <div>
+            <p class="text-sm font-semibold tracking-widest uppercase text-black mb-4">Achievements</p>
+            <h2 class="text-4xl md:text-5xl font-extrabold tracking-tighter text-black">Publications, <br/> Certifications & Awards</h2>
+        </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="p-8 bg-white rounded-4xl shadow-xl border border-slate-100 hover-move">
+            <div class="flex items-start gap-4">
+                <span class="material-symbols-outlined text-black">emoji_events</span>
+                <p class="text-black font-medium leading-relaxed">Top 20% Binary Prediction with a Rainfall Dataset - Kaggle Competition 2025</p>
+            </div>
+        </div>
+        <div class="p-8 bg-white rounded-4xl shadow-xl border border-slate-100 hover-move">
+            <div class="flex items-start gap-4">
+                <span class="material-symbols-outlined text-black">emoji_events</span>
+                <p class="text-black font-medium leading-relaxed">Top 40% Predict Podcast Listening Time minutes - Kaggle Competition 2025</p>
+            </div>
+        </div>
+        <div class="p-8 bg-white rounded-4xl shadow-xl border border-slate-100 hover-move">
+            <div class="flex items-start gap-4">
+                <span class="material-symbols-outlined text-black">workspace_premium</span>
+                <p class="text-black font-medium leading-relaxed">Honorific Mention in NationalNASA Apps Competition - Mentor position, 2025 in Santiago, Dominican Republic</p>
+            </div>
+        </div>
+        <div class="p-8 bg-white rounded-4xl shadow-xl border border-slate-100 hover-move">
+            <div class="flex items-start gap-4">
+                <span class="material-symbols-outlined text-black">military_tech</span>
+                <p class="text-black font-medium leading-relaxed">1st Place in First Lego League, Innovation Project National AWARD 2026 - Mentor Position</p>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- Minimal Footer -->
 <footer class="relative z-50 flex flex-col md:flex-row justify-between items-center px-8 md:px-16 py-8 w-full max-w-7xl mx-auto text-black font-sans text-xs tracking-wide uppercase">
 <p>© 2024 Edwin Jeremías Agustín Yack.</p>
@@ -230,9 +268,9 @@
             delay: 200
         });
 
-        // About and Projects Section Entrance (Slide up)
+        // About, Projects, and Awards Section Entrance (Slide up)
         anime({
-            targets: '#about, #projects',
+            targets: '#about, #projects, #awards',
             translateY: [50, 0],
             opacity: [0, 1],
             duration: 1000,
