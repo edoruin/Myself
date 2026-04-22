@@ -95,20 +95,31 @@
 <a class="text-black font-medium tracking-tight hover:text-black transition-colors duration-300" href="#projects">Projects</a>
 <a class="text-black font-medium tracking-tight hover:text-black transition-colors duration-300" href="#awards">Awards</a>
 </div>
-<div class="flex gap-4">
-<a href="mailto:eagustyack+work@gmail.com" class="text-black hover:text-black transition-colors"><span class="material-symbols-outlined">mail</span></a>
+<div class="flex gap-4 items-center">
+<a href="mailto:eagustyack+work@gmail.com" class="text-black hover:text-black transition-colors flex items-center"><span class="material-symbols-outlined">mail</span></a>
+<button id="menu-btn" class="md:hidden text-black focus:outline-none flex items-center">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</div>
+</div>
+<!-- Mobile Menu -->
+<div id="mobile-menu" class="hidden md:hidden bg-slate-50/95 backdrop-blur-md border-b border-slate-200 w-full overflow-hidden transition-all duration-300 ease-in-out">
+<div class="flex flex-col px-8 py-6 gap-6">
+<a class="text-black font-semibold text-lg tracking-tight" href="#home">Home</a>
+<a class="text-black font-medium text-lg tracking-tight" href="#projects">Projects</a>
+<a class="text-black font-medium text-lg tracking-tight" href="#awards">Awards</a>
 </div>
 </div>
 </nav>
 
 <!-- Hero Section -->
-<section id="home" class="relative z-10 flex items-center justify-center w-full max-w-7xl mx-auto px-8 md:px-16 py-20 md:py-32">
+<section id="home" class="relative z-10 flex items-center justify-center w-full max-w-7xl mx-auto px-8 md:px-16 py-10 md:py-32">
 <div class="w-full grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24 items-center">
 <!-- Left Text Column -->
 <div class="lg:col-span-7 flex flex-col justify-center space-y-8">
 <div>
 <p class="text-sm font-semibold tracking-widest uppercase text-black mb-4">Professional Portfolio</p>
-<h1 class="text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tighter leading-[1.1] text-black">
+<h1 class="text-4xl md:text-7xl lg:text-8xl font-extrabold tracking-tighter leading-[1.1] text-black">
                         Edwin J. A. Yack
                     </h1>
 </div>
@@ -124,15 +135,14 @@
 <a class="group flex items-center gap-2 text-black font-semibold border-b border-slate-900 pb-1 hover:text-black hover:border-slate-600 transition-all" href="#projects">
                         View Projects <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
 </a>
-                    </a>
                 </div>
 </div>
 <!-- Right Visual Column -->
-<div class="lg:col-span-5 relative flex justify-center lg:justify-end">
-<div class="relative w-72 h-[38rem] md:w-96 md:h-[50rem] overflow-hidden z-20 portal-animation bg-white border-4 border-black rounded-[20%]">
+<div class="lg:col-span-5 relative flex flex-col items-center lg:items-end">
+<div class="relative w-72 h-80 md:w-96 md:h-[50rem] overflow-hidden z-20 portal-animation bg-white border-4 border-black rounded-4xl md:rounded-[20%]">
 <video autoplay muted playsinline class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" src="animation.webm"></video>
 </div>
-<div class="absolute -bottom-12 -left-8 md:-left-16 z-30 corner-shape bg-slate-900 text-white py-12 px-8 md:py-16 md:px-10 w-64 md:w-80 shadow-2xl">
+<div class="relative -mt-16 mx-auto md:absolute md:-bottom-12 md:-left-16 md:mt-0 z-30 corner-shape bg-slate-900 text-white py-12 px-8 md:py-16 md:px-10 w-64 md:w-80 shadow-2xl">
 <div class="flex items-center gap-3 mb-8">
 <div class="p-2 bg-white/10 rounded-lg">
 <span class="material-symbols-outlined text-white">database</span>
@@ -151,7 +161,7 @@
 </section>
  
 <!-- Projects Section -->
-<section id="projects" class="relative z-10 w-full max-w-7xl mx-auto px-8 md:px-16 py-24 opacity-0">
+<section id="projects" class="relative z-10 w-full max-w-7xl mx-auto px-8 md:px-16 py-12 md:py-24 opacity-0">
     <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
         <div>
             <p class="text-sm font-semibold tracking-widest uppercase text-black mb-4">Selected Works</p>
@@ -204,7 +214,7 @@
 </section>
 
 <!-- Publications, Certifications & Awards Section -->
-<section id="awards" class="relative z-10 w-full max-w-7xl mx-auto px-8 md:px-16 py-24 opacity-0">
+<section id="awards" class="relative z-10 w-full max-w-7xl mx-auto px-8 md:px-16 py-12 md:py-24 opacity-0">
     <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
         <div>
             <p class="text-sm font-semibold tracking-widest uppercase text-black mb-4">Achievements</p>
@@ -286,6 +296,26 @@
             duration: 800,
             easing: 'easeOutExpo',
             delay: anime.stagger(100, {from: 'center'})
+        });
+
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = menuBtn.querySelector('.material-symbols-outlined');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            const isHidden = mobileMenu.classList.contains('hidden');
+            menuIcon.textContent = isHidden ? 'menu' : 'close';
+        });
+
+        // Close menu when a link is clicked
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuIcon.textContent = 'menu';
+            });
         });
     });
 </script>
