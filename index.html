@@ -91,11 +91,12 @@
 <div class="text-xl font-bold text-black tracking-tight">Edwin J. A. Yack</div>
 </div>
 <div class="hidden md:flex gap-8 items-center">
-<a class="text-black font-semibold border-b border-slate-900 tracking-tight hover:text-black transition-colors duration-300" href="#home">Home</a>
-<a class="text-black font-medium tracking-tight hover:text-black transition-colors duration-300" href="#projects">Projects</a>
-<a class="text-black font-medium tracking-tight hover:text-black transition-colors duration-300" href="#awards">Awards</a>
+<a class="text-black font-semibold border-b border-slate-900 tracking-tight hover:text-black transition-colors duration-300" href="#home" data-i18n="nav_home">Home</a>
+<a class="text-black font-medium tracking-tight hover:text-black transition-colors duration-300" href="#projects" data-i18n="nav_projects">Projects</a>
+<a class="text-black font-medium tracking-tight hover:text-black transition-colors duration-300" href="#awards" data-i18n="nav_awards">Awards</a>
 </div>
 <div class="flex gap-4 items-center">
+<button id="lang-toggle" class="text-black hover:text-black transition-colors flex items-center text-sm font-bold border border-black px-2 py-1 rounded-md">EN</button>
 <a href="mailto:eagustyack+work@gmail.com" class="text-black hover:text-black transition-colors flex items-center"><span class="material-symbols-outlined">mail</span></a>
 <button id="menu-btn" class="md:hidden text-black focus:outline-none flex items-center">
 <span class="material-symbols-outlined text-3xl">menu</span>
@@ -105,9 +106,10 @@
 <!-- Mobile Menu -->
 <div id="mobile-menu" class="hidden md:hidden bg-slate-50/95 backdrop-blur-md border-b border-slate-200 w-full overflow-hidden transition-all duration-300 ease-in-out">
 <div class="flex flex-col px-8 py-6 gap-6">
-<a class="text-black font-semibold text-lg tracking-tight" href="#home">Home</a>
-<a class="text-black font-medium text-lg tracking-tight" href="#projects">Projects</a>
-<a class="text-black font-medium text-lg tracking-tight" href="#awards">Awards</a>
+<a class="text-black font-semibold text-lg tracking-tight" href="#home" data-i18n="nav_home">Home</a>
+<a class="text-black font-medium text-lg tracking-tight" href="#projects" data-i18n="nav_projects">Projects</a>
+<a class="text-black font-medium text-lg tracking-tight" href="#awards" data-i18n="nav_awards">Awards</a>
+<button id="lang-toggle-mobile" class="text-left text-black font-medium text-lg tracking-tight w-fit border border-black px-2 py-1 rounded-md">EN</button>
 </div>
 </div>
 </nav>
@@ -118,22 +120,22 @@
 <!-- Left Text Column -->
 <div class="lg:col-span-7 flex flex-col justify-center space-y-8">
 <div>
-<p class="text-sm font-semibold tracking-widest uppercase text-black mb-4">Professional Portfolio</p>
+<p class="text-sm font-semibold tracking-widest uppercase text-black mb-4" data-i18n="hero_subtitle">Professional Portfolio</p>
 <h1 class="text-4xl md:text-7xl lg:text-8xl font-extrabold tracking-tighter leading-[1.1] text-black">
                         Edwin J. A. Yack
                     </h1>
 </div>
 <h2 class="text-2xl md:text-3xl font-medium text-black flex items-center gap-3">
-<span class="material-symbols-outlined text-3xl font-light">school</span> tecnologist DataScience student
-                </h2>
+<span class="material-symbols-outlined text-3xl font-light">school</span> <span data-i18n="hero_role">tecnologist DataScience student</span>
+                    </h2>
 <div class="max-w-2xl mt-4">
-<p class="text-lg md:text-xl text-black leading-relaxed font-light">
+<p class="text-lg md:text-xl text-black leading-relaxed font-light" data-i18n="hero_desc">
                         I am a Data Scientist with a focus on ML Engineering, specialized in the complete cycle: from training and fine-tuning to the deployment of final applications. I focus on translating complex data into simple, high-impact, applicable solutions. My purpose is to build automation systems that deliver efficiency and operational value.
                     </p>
 </div>
 <div class="flex flex-wrap gap-6 pt-4">
 <a class="group flex items-center gap-2 text-black font-semibold border-b border-slate-900 pb-1 hover:text-black hover:border-slate-600 transition-all" href="#projects">
-                        View Projects <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                        <span data-i18n="hero_cta">View Projects</span> <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
 </a>
                 </div>
 </div>
@@ -148,11 +150,11 @@
 <span class="material-symbols-outlined text-white">database</span>
 </div>
 <div>
-<p class="text-xs text-black uppercase tracking-wider font-semibold">Mission</p>
-<p class="text-lg font-bold">Tecnologist DataScience Student</p>
+<p class="text-xs text-black uppercase tracking-wider font-semibold" data-i18n="mission_title">Mission</p>
+<p class="text-lg font-bold" data-i18n="mission_role">Tecnologist DataScience Student</p>
 </div>
 </div>
-<p class="text-sm text-slate-300 font-light leading-relaxed mb-8 italic">
+<p class="text-sm text-slate-300 font-light leading-relaxed mb-8 italic" data-i18n="mission_quote">
                         "I'd focus my life on solving your problems with my knowledge, tools, and creativity. Let me give you a hand!"
                     </p>
 </div>
@@ -163,11 +165,11 @@
 <!-- Projects Section -->
 <section id="projects" class="relative z-10 w-full max-w-7xl mx-auto px-8 md:px-16 py-12 md:py-24 opacity-0">
     <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
-        <div>
-            <p class="text-sm font-semibold tracking-widest uppercase text-black mb-4">Selected Works</p>
-            <h2 class="text-4xl md:text-5xl font-extrabold tracking-tighter text-black">Portfolio of <br/> Insight</h2>
-        </div>
-        <a class="text-black font-semibold border-b border-slate-900 pb-1 hover:text-black hover:border-slate-600 transition-all" href="https://github.com/edoruin" target="_blank">View all on GitHub</a>
+<div>
+<p class="text-sm font-semibold tracking-widest uppercase text-black mb-4" data-i18n="projects_subtitle">Selected Works</p>
+<h2 class="text-4xl md:text-5xl font-extrabold tracking-tighter text-black" data-i18n="projects_title">Portfolio of <br/> Insight</h2>
+</div>
+<a class="text-black font-semibold border-b border-slate-900 pb-1 hover:text-black hover:border-slate-600 transition-all" href="https://github.com/edoruin" target="_blank" data-i18n="projects_github">View all on GitHub</a>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-start">
@@ -176,39 +178,39 @@
             <div class="h-48 overflow-hidden">
                 <img src="files/POdcastliestingtime.png" alt="Project 1" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"/>
             </div>
-            <div class="p-8">
-                <div class="flex justify-between items-start mb-4">
-                    <h3 class="text-xl font-bold text-black">Predict podcast listening time</h3>
-                    <span class="material-symbols-outlined text-black group-hover:text-black transition-colors">open_in_new</span>
-                </div>
-                <p class="text-black font-light leading-relaxed mb-6">This is the second Kaggle competition I am actively participating in. Unlike previous ones, this one emphasizes exploratory data analysis over the creation and implementation of Machine Learning models.</p>
-            </div>
+<div class="p-8">
+<div class="flex justify-between items-start mb-4">
+<h3 class="text-xl font-bold text-black" data-i18n="proj1_title">Predict podcast listening time</h3>
+<span class="material-symbols-outlined text-black group-hover:text-black transition-colors">open_in_new</span>
+</div>
+<p class="text-black font-light leading-relaxed mb-6" data-i18n="proj1_desc">This is the second Kaggle competition I am actively participating in. Unlike previous ones, this one emphasizes exploratory data analysis over the creation and implementation of Machine Learning models.</p>
+</div>
         </a>
         <!-- Project 2 -->
         <a href="https://github.com/edoruin/GestureVision" target="_blank" class="group relative block bg-white rounded-4xl overflow-hidden shadow-2xl transition-all duration-500 hover:-translate-y-2 hover:scale-[1.02] hover-move">
             <div class="h-48 overflow-hidden">
                 <img src="files/gesturevision.png" alt="Project 2" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"/>
             </div>
-            <div class="p-8">
-                <div class="flex justify-between items-start mb-4">
-                    <h3 class="text-xl font-bold text-black">GestureVision</h3>
-                    <span class="material-symbols-outlined text-black group-hover:text-black transition-colors">open_in_new</span>
-                </div>
-                <p class="text-black font-light leading-relaxed mb-6">A computer vision-based automation tool that uses webcam gesture recognition to access configurable local keyboard shortcuts</p>
-            </div>
+<div class="p-8">
+<div class="flex justify-between items-start mb-4">
+<h3 class="text-xl font-bold text-black" data-i18n="proj2_title">GestureVision</h3>
+<span class="material-symbols-outlined text-black group-hover:text-black transition-colors">open_in_new</span>
+</div>
+<p class="text-black font-light leading-relaxed mb-6" data-i18n="proj2_desc">A computer vision-based automation tool that uses webcam gesture recognition to access configurable local keyboard shortcuts</p>
+</div>
         </a>
         <!-- Project 3 -->
         <a href="https://drive.google.com/file/d/1BlOtaY9925UkFTiWOIfamXPwlI99uWLy/view?usp=sharing" target="_blank" class="group relative block bg-white rounded-4xl overflow-hidden shadow-2xl transition-all duration-500 hover:-translate-y-2 hover:scale-[1.02] hover-move">
             <div class="h-48 overflow-hidden">
                 <img src="files/RepDOmBankAnalysis.png" alt="Project 3" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"/>
             </div>
-            <div class="p-8">
-                <div class="flex justify-between items-start mb-4">
-                    <h3 class="text-xl font-bold text-black">Behavior of Multiple Banks(Spanish needed)</h3>
-                    <span class="material-symbols-outlined text-black group-hover:text-black transition-colors">open_in_new</span>
-                </div>
-                <p class="text-black font-light leading-relaxed mb-6">The report analyzes the variables that affect significant events in some of the 17 multiple banks, focusing on their loan portfolios between 2022 and 2023. The data were collected from the Dominican Banking Market Information System (SIMBAD) and focuses on market development, comparing the behavior of some banks during the established periods.</p>
-            </div>
+<div class="p-8">
+<div class="flex justify-between items-start mb-4">
+<h3 class="text-xl font-bold text-black" data-i18n="proj3_title">Behavior of Multiple Banks(Spanish needed)</h3>
+<span class="material-symbols-outlined text-black group-hover:text-black transition-colors">open_in_new</span>
+</div>
+<p class="text-black font-light leading-relaxed mb-6" data-i18n="proj3_desc">The report analyzes the variables that affect significant events in some of the 17 multiple banks, focusing on their loan portfolios between 2022 and 2023. The data were collected from the Dominican Banking Market Information System (SIMBAD) and focuses on market development, comparing the behavior of some banks during the established periods.</p>
+</div>
         </a>
     </div>
 </section>
@@ -216,50 +218,136 @@
 <!-- Publications, Certifications & Awards Section -->
 <section id="awards" class="relative z-10 w-full max-w-7xl mx-auto px-8 md:px-16 py-12 md:py-24 opacity-0">
     <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
-        <div>
-            <p class="text-sm font-semibold tracking-widest uppercase text-black mb-4">Achievements</p>
-            <h2 class="text-4xl md:text-5xl font-extrabold tracking-tighter text-black">Publications, <br/> Certifications & Awards</h2>
-        </div>
+<div>
+<p class="text-sm font-semibold tracking-widest uppercase text-black mb-4" data-i18n="awards_subtitle">Achievements</p>
+<h2 class="text-4xl md:text-5xl font-extrabold tracking-tighter text-black" data-i18n="awards_title">Publications, <br/> Certifications & Awards</h2>
+</div>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div class="p-8 bg-white rounded-4xl shadow-xl border border-slate-100 hover-move">
-            <div class="flex items-start gap-4">
-                <span class="material-symbols-outlined text-black">emoji_events</span>
-                <p class="text-black font-medium leading-relaxed">Top 20% Binary Prediction with a Rainfall Dataset - Kaggle Competition 2025</p>
-            </div>
-        </div>
-        <div class="p-8 bg-white rounded-4xl shadow-xl border border-slate-100 hover-move">
-            <div class="flex items-start gap-4">
-                <span class="material-symbols-outlined text-black">emoji_events</span>
-                <p class="text-black font-medium leading-relaxed">Top 40% Predict Podcast Listening Time minutes - Kaggle Competition 2025</p>
-            </div>
-        </div>
-        <div class="p-8 bg-white rounded-4xl shadow-xl border border-slate-100 hover-move">
-            <div class="flex items-start gap-4">
-                <span class="material-symbols-outlined text-black">workspace_premium</span>
-                <p class="text-black font-medium leading-relaxed">Honorific Mention in NationalNASA Apps Competition - Mentor position, 2025 in Santiago, Dominican Republic</p>
-            </div>
-        </div>
-        <div class="p-8 bg-white rounded-4xl shadow-xl border border-slate-100 hover-move">
-            <div class="flex items-start gap-4">
-                <span class="material-symbols-outlined text-black">military_tech</span>
-                <p class="text-black font-medium leading-relaxed">1st Place in First Lego League, Innovation Project National AWARD 2026 - Mentor Position</p>
-            </div>
-        </div>
+<div class="p-8 bg-white rounded-4xl shadow-xl border border-slate-100 hover-move">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-black">emoji_events</span>
+<p class="text-black font-medium leading-relaxed" data-i18n="award1">Top 20% Binary Prediction with a Rainfall Dataset - Kaggle Competition 2025</p>
+</div>
+</div>
+<div class="p-8 bg-white rounded-4xl shadow-xl border border-slate-100 hover-move">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-black">emoji_events</span>
+<p class="text-black font-medium leading-relaxed" data-i18n="award2">Top 40% Predict Podcast Listening Time minutes - Kaggle Competition 2025</p>
+</div>
+</div>
+<div class="p-8 bg-white rounded-4xl shadow-xl border border-slate-100 hover-move">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-black">workspace_premium</span>
+<p class="text-black font-medium leading-relaxed" data-i18n="award3">Honorific Mention in NationalNASA Apps Competition - Mentor position, 2025 in Santiago, Dominican Republic</p>
+</div>
+</div>
+<div class="p-8 bg-white rounded-4xl shadow-xl border border-slate-100 hover-move">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-black">military_tech</span>
+<p class="text-black font-medium leading-relaxed" data-i18n="award4">1st Place in First Lego League, Innovation Project National AWARD 2026 - Mentor Position</p>
+</div>
+</div>
     </div>
 </section>
 
 <!-- Minimal Footer -->
 <footer class="relative z-50 flex flex-col md:flex-row justify-between items-center px-8 md:px-16 py-8 w-full max-w-7xl mx-auto text-black font-sans text-xs tracking-wide uppercase">
-<p>© 2024 Edwin Jeremías Agustín Yack.</p>
+<p data-i18n="footer_copy">© 2024 Edwin Jeremías Agustín Yack.</p>
 <div class="flex gap-6 mt-4 md:mt-0">
-<a class="hover:text-black transition-colors" href="https://github.com/edoruin" target="_blank">GitHub</a>
-<a class="hover:text-black transition-colors" href="https://www.linkedin.com/in/edwin-jeremias-agustin" target="_blank">LinkedIn</a>
+<a class="hover:text-black transition-colors" href="https://github.com/edoruin" target="_blank" data-i18n="footer_github">GitHub</a>
+<a class="hover:text-black transition-colors" href="https://www.linkedin.com/in/edwin-jeremias-agustin" target="_blank" data-i18n="footer_linkedin">LinkedIn</a>
 </div>
 </footer>
 <script>
+    const translations = {
+        en: {
+            nav_home: "Home",
+            nav_projects: "Projects",
+            nav_awards: "Awards",
+            hero_subtitle: "Professional Portfolio",
+            hero_role: "tecnologist DataScience student",
+            hero_desc: "I am a Data Scientist with a focus on ML Engineering, specialized in the complete cycle: from training and fine-tuning to the deployment of final applications. I focus on translating complex data into simple, high-impact, applicable solutions. My purpose is to build automation systems that deliver efficiency and operational value.",
+            hero_cta: "View Projects",
+            mission_title: "Mission",
+            mission_role: "Tecnologist DataScience Student",
+            mission_quote: '"I\'d focus my life on solving your problems with my knowledge, tools, and creativity. Let me give you a hand!"',
+            projects_subtitle: "Selected Works",
+            projects_title: "Portfolio of <br/> Insight",
+            projects_github: "View all on GitHub",
+            proj1_title: "Predict podcast listening time",
+            proj1_desc: "This is the second Kaggle competition I am actively participating in. Unlike previous ones, this one emphasizes exploratory data analysis over the creation and implementation of Machine Learning models.",
+            proj2_title: "GestureVision",
+            proj2_desc: "A computer vision-based automation tool that uses webcam gesture recognition to access configurable local keyboard shortcuts",
+            proj3_title: "Behavior of Multiple Banks(Spanish needed)",
+            proj3_desc: "The report analyzes the variables that affect significant events in some of the 17 multiple banks, focusing on their loan portfolios between 2022 and 2023. The data were collected from the Dominican Banking Market Information System (SIMBAD) and focuses on market development, comparing the behavior of some banks during the established periods.",
+            awards_subtitle: "Achievements",
+            awards_title: "Publications, <br/> Certifications & Awards",
+            award1: "Top 20% Binary Prediction with a Rainfall Dataset - Kaggle Competition 2025",
+            award2: "Top 40% Predict Podcast Listening Time minutes - Kaggle Competition 2025",
+            award3: "Honorific Mention in NationalNASA Apps Competition - Mentor position, 2025 in Santiago, Dominican Republic",
+            award4: "1st Place in First Lego League, Innovation Project National AWARD 2026 - Mentor Position",
+            footer_copy: "© 2024 Edwin Jeremías Agustín Yack.",
+            footer_github: "GitHub",
+            footer_linkedin: "LinkedIn",
+        },
+        es: {
+            nav_home: "Inicio",
+            nav_projects: "Proyectos",
+            nav_awards: "Premios",
+            hero_subtitle: "Portafolio Profesional",
+            hero_role: "estudiante de tecnología en Ciencia de Datos",
+            hero_desc: "Soy un Científico de Datos enfocado en Ingeniería de ML, especializado en el ciclo completo: desde el entrenamiento y ajuste fino hasta el despliegue de aplicaciones finales. Me enfoco en traducir datos complejos en soluciones simples, de alto impacto y aplicables. Mi propósito es construir sistemas de automatización que entreguen eficiencia y valor operativo.",
+            hero_cta: "Ver Proyectos",
+            mission_title: "Misión",
+            mission_role: "Estudiante de Tecnología en Ciencia de Datos",
+            mission_quote: '"Enfocaría mi vida en resolver tus problemas con mi conocimiento, herramientas y creatividad. ¡Déjame darte una mano!"',
+            projects_subtitle: "Trabajos Seleccionados",
+            projects_title: "Portafolio de <br/> Perspicacia",
+            projects_github: "Ver todo en GitHub",
+            proj1_title: "Predecir tiempo de escucha de podcasts",
+            proj1_desc: "Esta es la segunda competencia de Kaggle en la que participo activamente. A diferencia de las anteriores, esta enfatiza el análisis exploratorio de datos sobre la creación e implementación de modelos de Machine Learning.",
+            proj2_title: "GestureVision",
+            proj2_desc: "Una herramienta de automatización basada en visión computacional que utiliza el reconocimiento de gestos por webcam para acceder a atajos de teclado locales configurables",
+            proj3_title: "Comportamiento de Bancos Múltiples",
+            proj3_desc: "El informe analiza las variables que afectan eventos significativos en algunos de los 17 bancos múltiples, centrándose en sus carteras de préstamos entre 2022 y 2023. Los datos fueron recolectados del Sistema de Información del Mercado Bancario Dominicano (SIMBAD) y se centran en el desarrollo del mercado, comparando el comportamiento de algunos bancos durante los periodos establecidos.",
+            awards_subtitle: "Logros",
+            awards_title: "Publicaciones, <br/> Certificaciones y Premios",
+            award1: "Top 20% Predicción Binaria con Dataset de Lluvias - Competencia Kaggle 2025",
+            award2: "Top 40% Predecir tiempo de escucha de podcasts - Competencia Kaggle 2025",
+            award3: "Mención Honorífica en la Competencia Nacional NASA Apps - Posición de Mentor, 2025 en Santiago, República Dominicana",
+            award4: "1er Lugar en First Lego League, Premio Nacional al Proyecto de Innovación 2026 - Posición de Mentor",
+            footer_copy: "© 2024 Edwin Jeremías Agustín Yack.",
+            footer_github: "GitHub",
+            footer_linkedin: "LinkedIn",
+        }
+    };
+
+    let currentLang = 'en';
+
+    function updateLanguage(lang) {
+        currentLang = lang;
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+            const key = el.getAttribute('data-i18n');
+            el.innerHTML = translations[lang][key];
+        });
+        document.getElementById('lang-toggle').textContent = lang === 'en' ? 'EN' : 'ES';
+        document.getElementById('lang-toggle-mobile').textContent = lang === 'en' ? 'EN' : 'ES';
+    }
+
     window.addEventListener('DOMContentLoaded', () => {
+        const langBtn = document.getElementById('lang-toggle');
+        const langBtnMobile = document.getElementById('lang-toggle-mobile');
+
+        const toggleLang = () => {
+            const newLang = currentLang === 'en' ? 'es' : 'en';
+            updateLanguage(newLang);
+        };
+
+        langBtn.addEventListener('click', toggleLang);
+        langBtnMobile.addEventListener('click', toggleLang);
+
         // Hero Entrance
         anime({
             targets: '.lg\\:col-span-7',
